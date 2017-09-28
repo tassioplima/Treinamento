@@ -7,8 +7,8 @@ Funcionalidade: Buscar conteudo e valores OLX
     Dado que estou na pagina inicial
     E selecionar estado na area de busca
     
-      | Estado |
-      | R     |
+      | 	 Estado 	|
+      | 	<Estado>  |
 
 
   @ID01 @PesquisaCenario
@@ -16,7 +16,7 @@ Funcionalidade: Buscar conteudo e valores OLX
   Cenario: Realizar uma pesquisa no site da OLX e imprimir os resultados 
     Quando realizar busca de um produto
       | Busca |
-      | bicicleta  |
+      | <Item>  |
     Entao e apresentado resultado da busca do "5" resultado
 
   @ID02 @PesquisaCenario
@@ -24,8 +24,8 @@ Funcionalidade: Buscar conteudo e valores OLX
   Cenario: Realizar uma pesquisa no site da OLX que contenha paginacao
     Quando realizar busca de um produto
       | Busca 		 |
-      | bicicleta  |
+      | <Item>  |
     E realizar paginacao
-      | Pagina |
-      |      2 |
+      | Pagina 			|
+      | <Paginacao> |
     Entao e apresentado resultado da busca do "1" resultado

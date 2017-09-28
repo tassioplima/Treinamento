@@ -30,7 +30,7 @@ public class BuscarProdFuncionalidade {
 	public void imprimindoResultadosGrid(int numeroLinha) {
 		List<WebElement> listaElementos = buscarProdPage.getGridResultadosBusca();
 		int cont = 1;
-		System.out.println("**********Resultados da grid**********\n");
+		System.out.println("Resultados: ");
 		for (WebElement webElement : listaElementos) {
 			System.out.println("Titulo: " + buscarProdPage.getTituloProduto(webElement).getText() + "\n");
 

@@ -9,37 +9,6 @@ import org.openqa.selenium.WebElement;
 
 public class BuscarProdPage extends Page {
 
-	public BuscarProdPage(WebDriver driver) {
-		super(driver);
-	}
-
-	public WebElement getCampoBuscar() {
-		return getElement(".//input[contains(@class, 'placeholder')]");
-	}
-
-	public void setCampoBuscar(String produto) {
-		getCampoBuscar().sendKeys(produto);
-	}
-
-	public WebElement getBotaoBuscar() {
-		return getElement(".//input[contains(@class, 'btn-search')]");
-	}
-
-	public void clickBotaoBuscar() {
-		getBotaoBuscar().click();
-	}
-
-	public List<WebElement> getGridResultadosBusca() {
-		List<WebElement> listaElementos;
-		return listaElementos = driver
-				.findElements(By.xpath(".//div[contains(@class, 'section_OLXad-list')]//ul/li/a"));
-	}
-
-	public WebElement getTituloProduto(WebElement elemento) {
-		WebElement tituloProduto = elemento.findElement(By.xpath("div[2]//h3"));
-		return tituloProduto;
-	}
-
 	public WebElement getValorProduto(WebElement elemento) {
 		WebElement elementoValorProduto = null;
 		try {
@@ -50,6 +19,37 @@ public class BuscarProdPage extends Page {
 
 		}
 		return elementoValorProduto;
+	}
+
+	public BuscarProdPage(WebDriver driver) {
+		super(driver);
+	}
+
+	public List<WebElement> getGridResultadosBusca() {
+		List<WebElement> listaElementos;
+		return listaElementos = driver
+				.findElements(By.xpath(".//div[contains(@class, 'section_OLXad-list')]//ul/li/a"));
+	}
+
+	public void setCampoBuscar(String produto) {
+		getCampoBuscar().sendKeys(produto);
+	}
+
+	public WebElement getCampoBuscar() {
+		return getElement(".//input[contains(@class, 'placeholder')]");
+	}
+
+	public WebElement getBotaoBuscar() {
+		return getElement(".//input[contains(@class, 'btn-search')]");
+	}
+
+	public void clickBotaoBuscar() {
+		getBotaoBuscar().click();
+	}
+
+	public WebElement getTituloProduto(WebElement elemento) {
+		WebElement tituloProduto = elemento.findElement(By.xpath("div[2]//h3"));
+		return tituloProduto;
 	}
 
 	public WebElement getPaginacao(String pag) {
